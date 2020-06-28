@@ -4,7 +4,7 @@ itsdangerous==0.24
 Jinja2==2.10
 MarkupSafe==1.0
 Werkzeug==0.14.1
-skimage==0.0
+scikit-image==0.17.2
 numpy==1.19.0
 opencv-python==4.2.0.34
 imutils==0.5.3
