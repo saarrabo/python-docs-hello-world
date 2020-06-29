@@ -5,9 +5,11 @@
 #import cv2
 #import imutils
 from flask import Flask, request, Response, send_file
-#import jsonpickle
+import jsonpickle
 app = Flask(__name__)
 
 @app.route('/api/detectcard', methods=['POST'])
 def detectcard():
-    return "Hello World"   
+    response = {'message': data}
+    response_pickled = jsonpickle.encode(response)
+    return Response(response=response_pickled, status=200, mimetype='application/json')
