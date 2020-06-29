@@ -8,6 +8,6 @@ from flask import Flask, request, Response, send_file
 #import jsonpickle
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/api/detectcard', methods=['POST'])
 def detectcard():
     return "Hello World"   
