@@ -5,7 +5,7 @@
 #import cv2
 #import imutils
 from flask import Flask, request, Response, send_file
-import jsonpickle
+#import jsonpickle
 app = Flask(__name__)
 
 @app.route('/api/detectcard')
