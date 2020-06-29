@@ -9,11 +9,11 @@ app = Flask(__name__)
 
 @app.route('/api/detectcard', methods=['POST'])
 def detectcard():
-    r = request
+    # r = request
     # convert string of image data to uint8
-    nparr = np.fromstring(r.data, np.uint8)
+    # nparr = np.fromstring(r.data, np.uint8)
     # decode image
-    img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    # img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
     # do some fancy processing here....
 
