@@ -15,8 +15,7 @@ def detectcard():
     nparr = np.fromstring(r.data, np.uint8)
     # decode image
     image = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
-    #cv2.imshow("Server", image)
-    #cv2.waitKey(0)
+
     ratio = image.shape[0] / 500.0
     orig = image.copy()
     image = imutils.resize(image, height = 500)
@@ -50,9 +49,10 @@ def detectcard():
 
 
     print("STEP 3: Apply perspective transform")
-    cv2.imwrite("Server_image.jpg", imutils.resize(warped, height = 650))
-    filename = "Server_image.jpg"
-    _, img_encoded = cv2.imencode('.jpg', warped)
-    data=img_encoded.tostring()
-    response = {'message': data}
-    return send_file(filename, mimetype='image/jpg', attachment_filename='processed.jpg')
+    #cv2.imwrite("Server_image.jpg", imutils.resize(warped, height = 650))
+    #filename = "Server_image.jpg"
+    #_, img_encoded = cv2.imencode('.jpg', warped)
+    #data=img_encoded.tostring()
+    #response = {'message': data}
+    #return send_file(filename, mimetype='image/jpg', attachment_filename='processed.jpg')
+    return "Hello World"	
